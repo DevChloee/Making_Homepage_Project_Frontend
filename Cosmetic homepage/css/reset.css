@@ -1,0 +1,116 @@
+@charset "utf-8"; 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+
+html, body, ul, li, div, header, section, footer, article, span, a, p, strong, h1, h2, h3, nav 
+form, img, input, button, label{
+    margin: 0;
+    padding: 0;
+    font-size: 100%; 
+}
+
+    /* For web accessibility
+    If display is none, screen reader can't read.
+    It's important to figure it out whether screen reader should reade contents or not */
+header, footer, section, article, nav{ 
+    display: block;
+}
+
+html{
+    font-size: 12px;
+}
+
+
+h1, h2, h3 {
+    /* font-size  : px, %, em, rem
+    It is recommended to write in em units when you want to implement subtle size differences. */
+    font-size: 1em;
+}
+
+ul, ol{
+    list-style: none;
+    /* list-style-type: none 
+    It means that there is not default type for ul, ol*/
+}
+
+img, fieldset{
+    border: none;
+}
+
+
+a:link,
+
+
+a:visited{
+    text-decoration: none; 
+    color: #222;
+}
+
+
+    /* When clicking tab key, It is applied */
+a:hover,
+a:active,
+a:focus{
+    text-decoration: underline;
+    color: #07c;
+}
+
+
+.skip{ 
+    /* Even though we can't see, It is what screen reader should read.*/
+    width: 1px; 
+    height: 1px;
+    overflow: hidden; 
+    line-height: 0; 
+    font-size: 0;
+    position: absolute;
+    left: -9999px; 
+    /* It pulls the content off the screen, but the screen reader continues to read it */
+    text-indent: -9999px; 
+
+    /* 
+    Two ways to implement pulling the content off (For web accessibility)
+    1. position: absolute; & left : -9999px;
+    2. text-indent : -9999px;
+    */
+}
+
+    /*
+    float - Use in all browsers
+    float: left, float:right, float: none
+        1) clearfix:after;
+        2) overflow:hidden;
+        3) display: inline;
+    */
+
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#skipNavi{
+    width: 100%;
+    position: relative;
+    z-index: 9999;
+} 
+
+#skipNavi a{
+    position: absolute;
+    top: -100px;
+    text-decoration: none;
+}
+
+
+#skipNavi a:hover,
+#skipNavi a:active,
+#skipNavi a:focus{
+    position:absolute;
+    top:0;
+    width: 100%;
+    display: block;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
