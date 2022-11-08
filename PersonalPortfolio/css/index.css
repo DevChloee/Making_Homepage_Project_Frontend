@@ -221,7 +221,7 @@ h2::before{
 
 /*--------------------resumes part------------------------*/
 .resume_main{
-    height: 90%;
+    height:fit-content;
     background-color: #3e5c76;
     /*3e5c76*/
     /* border: solid red; */
@@ -230,7 +230,7 @@ h2::before{
 
 .resume_box_wrapper{
     /* border: solid orange; */
-    height: 70vh;
+    /* height: 70vh; */
     margin: 1% 1% 0 1%;
     background-color: #3e5c76;
 }
@@ -306,8 +306,8 @@ h2::before{
 .lab_box{
     /* border: solid green; */
     display: flex;
-    height: 13vh;
     margin: 1%;
+    padding-bottom: 2%;
     gap: 10%;
     background-color: #3e5c76;
 }
@@ -316,17 +316,19 @@ h2::before{
     margin-left: 1%;
     border: solid #0d1321;
     display: flex;
-    height: 80%;
+    /* height: 80%; */
     background-color: #f0ebd8;
 }
 
 .lab_box_item a{
     display: block;
     overflow: hidden;
-}
-.lab_box_item a img{
     width: 200px;
     height: 200px;
+}
+.lab_box_item a img{
+    width: 100%;
+    height: 100%;
 }
 
 .lab_desc{
@@ -367,6 +369,15 @@ h2::before{
     margin: 0.5%;
 }
 
+.courses_main_header form{
+    display: block;
+    /* border: solid pink; */
+    margin: 1% 3% 0 0;
+}
+
+.courses_main_header form label{
+    color: #fff;
+}
 
 
 .level__items__wrapper{
@@ -412,8 +423,8 @@ h2::before{
 }
 .level__items{
     border: solid #0d1321;
-    height: 30%;
-    width: 32%;
+    height: 310px;
+    width: 33%;
     background-color: #f0ebd8;
     display: flex;
 
@@ -421,7 +432,7 @@ h2::before{
 
 .level__items__img{
     width: 65%;
-    height: 250px;
+    height: 100%
 }
 
 .level__items__img img{
@@ -433,5 +444,6 @@ h2::before{
     /* width: 70%; */
     /* overflow: hidden; */
     width: 40%;
+    margin: 3PX;
     /* border: solid red; */
 }
