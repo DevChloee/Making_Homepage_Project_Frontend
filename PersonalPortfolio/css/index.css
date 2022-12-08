@@ -1,6 +1,6 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: sans-serif;
     text-decoration: none;
     color: black;
@@ -11,41 +11,49 @@
 .container{
     height: 100vh;
     margin: 0 0;
-    /* background-color: #f0ebd8; */
+    background-color: #0d1321;
+    /* background-color:#222; */
 
 }
 
 .header{
     margin: 0 5%;
-    height: 10%;
+    height: 8%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items:center;
-    /* border: solid red; */
-    /* position: fixed; */
 
 }
 
 .header__menu{
-    /* border: solid blue; */
     display: flex;
     font-display: row;
     font-size: 1.7vw;
     gap: 20%;
 }
 
+.header__menu a{
+    color: #fff;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.fa-brands {
+    color: #fff;
+}
+
+
 .header__logo{
-    /* border: solid pink; */
     width: 20%;
     display: flex;
     justify-content: space-between;
+    color: #fff;
 }
 
 
 .main{
     height:fit-content;
-    background-color: #0d1321 ;
+    background-color: #0d1321;
     /* padding-top: 6%; */
     color: #fff;
 }
@@ -53,7 +61,6 @@
 .main__neon{
     display: flex;
     justify-content: center;
-    /* border: solid red; */
 }
 
 h2{
@@ -89,74 +96,114 @@ h2::before{
 }
 
 
-/* .main__image{
-    width: 30%;
-    height: 50px;
-} */
-
-.main__wrapper{
-    /* display: flex; */
-    /* border: solid blue; */
-    height: 85%;
-    display: flex;
-
-}
 .main__image{
     overflow: hidden;
-    /* border: solid red; */
-    width: 950px;
-    margin: 0% 2% 2% 2%;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 3%;
     
 }
 
-.main__contents{
-    /* border: solid yellow; */
-    margin: 0% 2% 2% 0;
-    font-size: 1.5rem;
+
+.main__introducing{
+    margin-top: 3%;
 }
+
 
 .main__image img{
     display: block;
-    /* border: solid yellow; */
-    border-radius: 20%;
-    width: 90%;
-    height: 90%;
-    margin: 10% auto;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
 }
 
-/* .resume__header {
-    position: fixed;
-} */
+.introducing__contents{
+    text-align: center;
+    font-size: 1.5rem;
+}
+/*----------container2 page ----------*/
+.container2 {
+    height: 100vh;
+    background-color: #f0ebd8;
+    position: relative;
+    z-index: 10;
+}
+.container2 .bg_l{
+    width: 50%;
+    height:1080px;
+    background: pink;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.container2 .bg_r{
+    width: 50%;
+    height:1080px;
+    background: lightblue;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.inner_con2{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    height: 1080px;
+    width: 100%;
+    background: url(../images/new_clock.png) no-repeat center top;
+    margin: 0 auto;
+    z-index: 10;
+}
 
-.hobbyimagges{
-    /* border: solid salmon; */
+.wrap_on_and_off{
     display: flex;
     justify-content: space-between;
+    margin: 0 7% 0 3.5%;
+
+}
+.container2_title{
+    text-align: center;
+    padding-top: 2%;
+    
+}
+
+.container2_title em{
+    font-size: 44px;
+	font-style: normal;
+	color: #f48840;
+}
+
+/*-----------hobby images------------*/
+.hobbyimagges{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    width: 100%;
     margin-top: 2%;
 }
 
+
 .hobbyimagges .item div{
-    width: 320px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     display: block;
-    background-color: #0d1321;
     position: relative;
-    opacity: 0.7;
     border: solid #fff;
+    margin-bottom: 30px;
+    margin-right: 10px;
 }
 
 .grid_content span{
     color: #fff;
-    font-size: 36px;
+    font-size: 16px;
 }
 
 .item .imgpop img{
     width: 100%;
     height: 100%;
     display: block;
-    opacity: 0;
-    transform: translate3d(-1000px,0,0);
-    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .hobbyimagges .item div:hover .imgpop img {
@@ -178,20 +225,11 @@ h2::before{
 }
 
 .hobbyimagges .item div:hover .grid_content{
-    padding: 140px 0 0 0;
-}
-
-.main__introducing{
-    margin-top: 5%;
-    /* background-color: #fff; */
-    /* color: #fff; */
+    padding: 70px 0 0 0;
 }
 
 
-.main__contents h1{
-    margin-top: 4%;
-    color: #fff;
-}
+
 
 .introducing__contents{
     color: #fff;
@@ -199,38 +237,94 @@ h2::before{
     line-height: 1.4;
 }
 
-.school_image{
+.container2_title{
+    color: #fff;
+}
+.container2_title_on{
+    padding-top: 4%;
+}
+
+
+.go_to_portfolio{
+    margin-top: 20px;
+    text-align: center;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 2%;
+    font-size: 1.5rem;
+}
+
+.portfolio_wrapper{
+    margin-top: 1%;
+    text-align: center;
+}
+.hobbyimagges2{
     display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-left: 10px;
     margin-top: 2%;
 }
-.school_image a{
+
+.hobbyimagges2 .item a{
+    width: 300px;
+    height: 300px;
     display: block;
-    width: 45%;
+    position: relative;
+    opacity: 0.7;
+    margin-left: 30px;
 }
-.school_image a img{
-    background-color: #0d1321;
+
+.hobbyimagges2 .item a strong{
+    color: black;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+.hobbyimagges .item strong{
+    color: black;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+}
+
+.item .imgpop2 img{
     width: 100%;
+    height: 100%;
+    display: block;
 }
 
-.college_desc{
-    color: #fff;
-    margin-left: 3%;
-    font-family:'Times New Roman', Times, serif;
-    line-height: 1.4;
+.on_sentence_wrap strong{
+    color: #222
 }
 
-/*--------------------resumes part------------------------*/
+
+.portfolio_wrapper a{
+    font-size: 24px;
+    color: #222;
+    display: block;
+    padding-top: 7%;
+    padding-left: 50%;
+
+}
+.fa-arrow-right{
+    color: #222f;
+}
+
+/*------resumes part--------*/
 .resume_main{
     height:fit-content;
     background-color: #3e5c76;
-    /*3e5c76*/
-    /* border: solid red; */
+    margin: 0% 2% 0% 2%;
+    padding: 1% 0% 1% 0%;
 }
 
 
 .resume_box_wrapper{
-    /* border: solid orange; */
-    /* height: 70vh; */
     margin: 1% 1% 0 1%;
     background-color: #3e5c76;
 }
@@ -304,7 +398,6 @@ h2::before{
 
 
 .lab_box{
-    /* border: solid green; */
     display: flex;
     margin: 1%;
     padding-bottom: 2%;
@@ -316,7 +409,6 @@ h2::before{
     margin-left: 1%;
     border: solid #0d1321;
     display: flex;
-    /* height: 80%; */
     background-color: #f0ebd8;
 }
 

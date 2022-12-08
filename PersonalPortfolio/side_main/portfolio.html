@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/607a06b07a.js" crossorigin="anonymous"></script>
+    <title>Parallax Effect</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/portfolio.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+</head>
+<body class="parallax">
+
+    <!-- info -->
+    <div class="paraScroll">scrollTop() : <span>0</span>px</div>
+    <!-- //info -->
+
+    <div id="paraHeader" class="header">
+        <nav class="header__menu">
+            <a href="/index.html" class="header__menu-1">Home</a>
+            <a href="./portfolio.html" class="">Portfolio</a>
+            <a href="./resume.html" class="header__menu-2">Resume</a>
+            <a href="./courses.html" class="header__menu-3">Courses</a>
+        </nav>
+
+        <ul class="header__logo">
+            <li><a href="https://github.com/DevChloee" class="footer__github">
+                <i class="fa-brands fa-github fa-2x"></i>
+            </a></li>
+            <li><a href="https://www.linkedin.com/in/dawon-jun-121268248/" class="footer_linkedIn">
+                <i class="fa-brands fa-linkedin fa-2x"></i>
+            </a></li>
+            <li><a href="https://www.instagram.com/chloe.jun.01/" class="footer__instagram">
+                <i class="fa-brands fa-instagram fa-2x"></i>
+            </a></li>
+            <li><a href="https://www.youtube.com/channel/UCgfUbE6MoCsR_OQMyF9kE3g"  class="footer_YouTube">
+                <i class="fa-brands fa-youtube fa-2x"></i>
+            </a></li>
+        </ul>
+    </div>
+    <!-- //header -->
+
+    <!-- nav -->
+    <nav class="paraDot">
+        <ul>
+            <li class="active"><a href="#section1"><span>portfolio1</span></a></li>
+            <li><a href="#section2"><span>portfolio2</span></a></li>
+            <li><a href="#section3"><span>portfolio3</span></a></li>
+            <li><a href="#section4"><span>portfolio4</span></a></li>
+
+        </ul>
+    </nav>
+    <!-- //nav -->
+
+    <main id="paraCont">
+        <a href="../side_portfolio/Ottawa city" id="section1" class="content__item">
+            <span class="content__item__num">01</span>
+            <h2 class="content__item__title">Section1</h2>
+            <figure class="content__item__imgWrap">
+                <div class="content__item__img"></div>
+            </figure>
+            <p class="content__item__desc">Ottawa Cityhall Homepage</p>
+            <p class="content__text">THis is made by html, css</p>
+        </a>
+        
+        <!-- //section1 -->
+
+        <a href="../side_portfolio/Cosmetic homepage/" id="section2" class="content__item">
+            <span class="content__item__num">02</span>
+            <h2 class="content__item__title">Section1</h2>
+            <figure class="content__item__imgWrap">
+                <div class="content__item__img"></div>
+            </figure>
+            <p class="content__item__desc cosmetic">Cosmetic Homepage</p>
+        </a>
+        <!-- //section2 -->
+
+        <a href="" id="section3" class="content__item">
+            <span class="content__item__num">03</span>
+            <h2 class="content__item__title">Section1</h2>
+            <figure class="content__item__imgWrap">
+                <div class="content__item__img"></div>
+            </figure>
+            <p class="content__item__desc">BLOG</p>
+        </a>
+        <!-- //section3 -->
+
+        <a href="#" id="section4" class="content__item">
+            <span class="content__item__num">04</span>
+            <h2 class="content__item__title">Section1</h2>
+            <figure class="content__item__imgWrap">
+                <div class="content__item__img"></div>
+            </figure>
+            <p class="content__item__desc">JAVA GAME (Find your ideal type!)</p>
+        </a>
+        <!-- //section4 -->
+    </main>
+    <!-- //main -->
+
+    <footer id="paraFooter">
+        <h2 class="footer_header">Dawon "Chole" Jun<em>Portfolio</em></h2>
+
+    </footer>
+    <!-- //footer -->
+
+    <!-- //script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        // Move by clikcing button 
+        $(".paraDot ul li").click(function(e){
+            e.preventDefault();
+            let target = $(this);
+            let index = target.index();
+            let section = $(".content__item").eq(index);  //해당하는 클래스와 내가 선택한것 연동시킴
+            let offset = section.offset().top;
+            $("html, body").animate({scrollTop:offset}, 600, "easeInQuint");
+        });
+
+        // When user scroll the window
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
+
+            $(".paraScroll span").text(parseInt(scrollTop));
+
+            for ( let i = 0; i <=8 ; i++){
+                if(scrollTop >= $(".content__item").eq(i).offset().top -2){
+                $(".paraDot ul li").eq(i).addClass("active").siblings().removeClass("active");
+            };
+            }
+        });
+    </script>
+
+</body>
+</html>
