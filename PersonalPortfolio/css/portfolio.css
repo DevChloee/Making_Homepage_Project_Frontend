@@ -88,11 +88,22 @@
     display: block;
     width: 1000px;
     max-width: 70vw;
-    margin: 30vw 0;
+    /* margin: 30vw 0; */
     text-align: right;
     position: relative;
     padding-top: 6vw;
-    border: solid salmon;
+    /* border: solid salmon; */
+}
+
+.content__item:first-child{
+    margin-top: 30vw;
+}
+.github_address{
+    color: #fff;
+    display: block;
+    /* border: solid green; */
+    margin-bottom: 30vw;
+    font-size: 24px;
 }
 .content__item:nth-child(even){
     margin-left: auto;
@@ -143,15 +154,27 @@
     z-index: 100;
     color:#fff;
 }
+
+.content__item__desc::after{
+    content:'';
+    display:block;
+    clear:both;
+ }
+
+
 .content__text {
-    position: absolute;
-    bottom: 0;
-    right: -280px;
+    float: right;
+}
+
+.github_des{
     color: #fff;
 }
-/* #section2 .cosmetic{
-    color: grey;
-} */
+hr{
+    display: none;
+}
+
+
+
 .content__item:nth-child(even) .content__item__desc {
     margin-right: 0;
     margin-left: -3vw;
@@ -160,14 +183,14 @@
 .content__item:nth-child(1) .content__item__img {
     background-image: url(../images/ottawa_cityhall_page.jpg);
 }
-.content__item:nth-child(2) .content__item__img {
+.content__item:nth-child(3) .content__item__img {
     background-image: url(../images/cosmetice_page.jpg);
 }
-.content__item:nth-child(3) .content__item__img {
-    background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg3.jpg);
+.content__item:nth-child(5) .content__item__img {
+    background-image: url(../images/IdealTypeGame.jpg);
 }
-.content__item:nth-child(4) .content__item__img {
-    background-image: url(https://webstoryboy.github.io/wtss/refer-effect/assets/img/bg4.jpg);
+.content__item:nth-child(7) .content__item__img {
+    background-image: url(../images/blog.jpg);
 }
 
 /* paraDot */
