@@ -63,6 +63,17 @@
     justify-content: center;
 }
 
+@media (max-width: 769px) {
+	.main__neon{
+        display: none;
+    }
+
+    .header__logo{
+        display: none;
+    }
+
+}
+
 h2{
     margin-top: 3%;
     position: relative;
